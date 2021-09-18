@@ -11,14 +11,7 @@ const List = ({ conversations, onCellClick }) => {
   return (
     <Wrapper>
       {sortedConversations.map((conversation) => {
-        const {
-          id,
-          senderId,
-          senderNickname,
-          recipientId,
-          recipientNickname,
-          lastMessageTimestamp,
-        } = conversation;
+        const { id } = conversation;
 
         return <ListCell key={id} {...conversation} onClick={onCellClick} />;
       })}

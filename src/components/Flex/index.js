@@ -3,23 +3,24 @@ import PropTypes from 'prop-types';
 
 const Flex = styled.div`
   display: flex;
-  justify-content: ${({ justifyContent }) => justifyContent};
-  flex-direction: ${({ flexDirection }) => flexDirection};
   align-items: ${({ alignItems }) => alignItems};
+  flex-direction: ${({ flexDirection }) => flexDirection};
   flex-wrap: ${({ flexWrap }) => flexWrap};
+  justify-content: ${({ justifyContent }) => justifyContent};
 `;
 
 Flex.defaultProps = {
-  justifyContent: 'normal',
+  alignItems: 'normal',
   flexDirection: 'row',
   flexWrap: 'nowrap',
-  alignItems: 'normal',
+  justifyContent: 'normal',
 };
 
 Flex.propTypes = {
-  justifyContent: PropTypes.string,
+  alignItems: PropTypes.string,
   flexDirection: PropTypes.string,
   flexWrap: PropTypes.string,
+  justifyContent: PropTypes.string,
 };
 
 export default Flex;

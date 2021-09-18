@@ -2,7 +2,7 @@ import sortConversations from '../sortConversations';
 
 describe('utils', () => {
   describe('sortConversations', () => {
-    it('should sorted conversations by last message timestamp', () => {
+    it('should sort conversations by last message timestamp', () => {
       const conversations = [
         {
           id: 1,

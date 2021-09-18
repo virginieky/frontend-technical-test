@@ -2,9 +2,8 @@ import React, { useReducer, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
 import useIsMounted from '../../hooks/useIsMounted';
-import { request } from '../../utils';
-
 import ConversationsContext from '../../contexts/ConversationsContext';
+import { request } from '../../utils';
 import reducer, { initialState } from './reducer';
 
 const ConversationsProvider = ({ children }) => {

@@ -8,12 +8,12 @@ import Wrapper from './Wrapper';
 
 const ListCell = ({
   id,
-  senderId,
-  senderNickname,
-  recipientId,
-  recipientNickname,
   lastMessageTimestamp,
   onClick,
+  recipientId,
+  recipientNickname,
+  senderId,
+  senderNickname,
 }) => {
   const handleClick = () => onClick(id);
 
@@ -34,22 +34,22 @@ const ListCell = ({
 
 ListCell.defaultProps = {
   id: null,
+  lastMessageTimestamp: null,
   onClick: () => {},
-  senderId: null,
-  senderNickname: null,
   recipientId: null,
   recipientNickname: null,
-  lastMessageTimestamp: null,
+  senderId: null,
+  senderNickname: null,
 };
 
 ListCell.propTypes = {
   id: PropTypes.number,
+  lastMessageTimestamp: PropTypes.number,
   onClick: PropTypes.func,
-  senderId: PropTypes.number,
-  senderNickname: PropTypes.string,
   recipientId: PropTypes.number,
   recipientNickname: PropTypes.string,
-  lastMessageTimestamp: PropTypes.number,
+  senderId: PropTypes.number,
+  senderNickname: PropTypes.string,
 };
 
 export default ListCell;

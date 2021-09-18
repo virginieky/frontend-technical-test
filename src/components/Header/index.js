@@ -3,7 +3,6 @@ import { Container } from 'reactstrap';
 import Image from 'next/image';
 
 import Logo from '../../assets/lbc-logo.webp';
-
 import Flex from '../Flex';
 import Padded from '../Padded';
 import Wrapper from './Wrapper';
