@@ -5,7 +5,7 @@ import { sortConversations } from '../../utils';
 import ListCell from '../ListCell';
 import Wrapper from './Wrapper';
 
-const List = ({ conversations }) => {
+const List = ({ conversations, onCellClick }) => {
   const sortedConversations = sortConversations(conversations);
 
   return (
@@ -20,7 +20,7 @@ const List = ({ conversations }) => {
           lastMessageTimestamp,
         } = conversation;
 
-        return <ListCell key={id} {...conversation} />;
+        return <ListCell key={id} {...conversation} onClick={onCellClick} />;
       })}
     </Wrapper>
   );
@@ -28,10 +28,12 @@ const List = ({ conversations }) => {
 
 List.defaultProps = {
   conversations: [],
+  onCellClick: () => {},
 };
 
 List.propTypes = {
   conversations: PropTypes.array,
+  onCellClick: PropTypes.func,
 };
 
 export default List;

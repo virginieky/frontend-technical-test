@@ -4,6 +4,7 @@ import { Alert } from 'reactstrap';
 import Button from '../../components/Button';
 import Header from '../../components/Header';
 import PageContainer from '../../components/PageContainer';
+import ConversationsDetailsView from '../../containers/ConversationsDetailsView';
 import ConversationsListView from '../../containers/ConversationsListView';
 import useConversationsContext from '../../hooks/useConversationsContext';
 
@@ -16,6 +17,7 @@ const ConversationsPage = () => {
       <PageContainer>
         Welcome
         {!hasError && <ConversationsListView />}
+        {!hasError && <ConversationsDetailsView />}
         {hasError && (
           <>
             <Alert color='danger'>Sorry! Can't load data… Please retry.</Alert>

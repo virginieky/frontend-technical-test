@@ -13,12 +13,15 @@ const ListCell = ({
   recipientId,
   recipientNickname,
   lastMessageTimestamp,
+  onClick,
 }) => {
+  const handleClick = () => onClick(id);
+
   return (
-    <Wrapper>
+    <Wrapper onClick={handleClick}>
       <Padded right bottom left>
         <Text fontSize='16px' ellipsis>
-          {recipientNickname} - {senderNickname}
+          {id} {recipientId} {recipientNickname} - {senderId} {senderNickname}
         </Text>
         <Padded bottom small />
         <Text fontSize='12px' ellipsis>
@@ -31,6 +34,7 @@ const ListCell = ({
 
 ListCell.defaultProps = {
   id: null,
+  onClick: () => {},
   senderId: null,
   senderNickname: null,
   recipientId: null,
@@ -40,6 +44,7 @@ ListCell.defaultProps = {
 
 ListCell.propTypes = {
   id: PropTypes.number,
+  onClick: PropTypes.func,
   senderId: PropTypes.number,
   senderNickname: PropTypes.string,
   recipientId: PropTypes.number,

@@ -5,11 +5,15 @@ import List from '../../components/List';
 import useConversationsContext from '../../hooks/useConversationsContext';
 
 const ListView = () => {
-  const { conversations } = useConversationsContext();
+  const { conversations, onSelectedConversationChange } =
+    useConversationsContext();
 
   return (
     <Container>
-      <List conversations={conversations} />
+      <List
+        conversations={conversations}
+        onCellClick={onSelectedConversationChange}
+      />
     </Container>
   );
 };
