@@ -5,5 +5,8 @@ module.exports = {
   },
   eslint: {
     ignoreDuringBuilds: true,
-  }
+  },
+  env: {
+    apiUrl: 'http://localhost:3005',
+  },
 }
