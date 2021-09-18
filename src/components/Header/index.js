@@ -8,19 +8,19 @@ import Flex from '../Flex';
 import Padded from '../Padded';
 import Wrapper from './Wrapper';
 
-const Header = ({
-}) => {
+const Header = () => {
   return (
     <Wrapper>
       <Container>
-        <Flex alignItems="center" justifyContent="center" >
+        <Flex alignItems='center' justifyContent='center'>
           <Padded top bottom>
             <div>
-              <Image 
-                src={Logo} 
-                alt="Leboncoin's logo" 
+              <Image
+                src={Logo}
+                alt="Leboncoin's logo"
                 layout='fill'
-                objectFit='contain' />
+                objectFit='contain'
+              />
             </div>
           </Padded>
         </Flex>
@@ -30,4 +30,3 @@ const Header = ({
 };
 
 export default Header;
-        

@@ -5,9 +5,7 @@ import List from '../../components/List';
 import useConversationsContext from '../../hooks/useConversationsContext';
 
 const ListView = () => {
-  const {
-    conversations,
-  } = useConversationsContext();
+  const { conversations } = useConversationsContext();
 
   return (
     <Container>

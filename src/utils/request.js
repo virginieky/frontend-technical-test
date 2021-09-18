@@ -7,7 +7,7 @@
  *
  * @return {object}          The parsed JSON from the request
  */
- function parseJSON(response) {
+function parseJSON(response) {
   if (response.status === 204 || response.status === 205) {
     return null;
   }
@@ -40,7 +40,5 @@ function checkStatus(response) {
  * @return {object}           The response data
  */
 export default function request(url, options) {
-  return fetch(url, options)
-    .then(checkStatus)
-    .then(parseJSON);
+  return fetch(url, options).then(checkStatus).then(parseJSON);
 }

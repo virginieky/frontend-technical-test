@@ -4,12 +4,10 @@ import PropTypes from 'prop-types';
 import useIsMounted from '../../hooks/useIsMounted';
 import { request } from '../../utils';
 
-import ConversationsContext from '../../contexts/ConversationsContext'; 
+import ConversationsContext from '../../contexts/ConversationsContext';
 import reducer, { initialState } from './reducer';
 
-const ConversationsProvider = ({
-  children,
-}) => {
+const ConversationsProvider = ({ children }) => {
   const isMounted = useIsMounted();
   const [reducerState, dispatch] = useReducer(reducer, initialState);
 
@@ -30,7 +28,6 @@ const ConversationsProvider = ({
           conversations,
         });
       }
-      
     } catch (err) {
       if (isMounted) {
         dispatch({ type: 'SET_ERROR' });
@@ -39,9 +36,7 @@ const ConversationsProvider = ({
   };
 
   return (
-    <ConversationsContext.Provider
-      value={{ ...reducerState }}
-    >
+    <ConversationsContext.Provider value={{ ...reducerState }}>
       {children}
     </ConversationsContext.Provider>
   );

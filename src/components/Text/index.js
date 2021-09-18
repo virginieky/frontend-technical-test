@@ -7,7 +7,9 @@ const Text = styled.p`
   font-size: ${({ fontSize }) => fontSize};
   font-weight: ${({ fontWeight }) => fontWeight};
   text-transform: ${({ textTransform }) => textTransform};
-  ${({ ellipsis }) => ellipsis && `
+  ${({ ellipsis }) =>
+    ellipsis &&
+    `
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

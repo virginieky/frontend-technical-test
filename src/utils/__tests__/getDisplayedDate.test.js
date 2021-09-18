@@ -6,7 +6,7 @@ describe('utils', () => {
       const value = '1625637849';
 
       const expected = '07/07/2021';
-      
+
       expect(getDisplayedDate(value)).toEqual(expected);
     });
 
@@ -14,7 +14,7 @@ describe('utils', () => {
       const value = null;
 
       const expected = null;
-      
+
       expect(getDisplayedDate(value)).toEqual(expected);
     });
 
@@ -22,7 +22,7 @@ describe('utils', () => {
       const value = undefined;
 
       const expected = null;
-      
+
       expect(getDisplayedDate(value)).toEqual(expected);
     });
   });
