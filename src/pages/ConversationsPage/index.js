@@ -1,5 +1,5 @@
 import React from 'react';
-import { Alert } from 'reactstrap';
+import { Alert, Col, Row } from 'reactstrap';
 
 import Button from '../../components/Button';
 import Header from '../../components/Header';
@@ -15,9 +15,17 @@ const ConversationsPage = () => {
     <>
       <Header />
       <PageContainer>
+        {!hasError && (
+          <Row>
+            <Col xs='12' lg='4'>
+              <ConversationsListView />
+            </Col>
+            <Col xs='12' lg='8'>
+              <ConversationsDetailsView />
+            </Col>
+          </Row>
+        )}
         Welcome
-        {!hasError && <ConversationsListView />}
-        {!hasError && <ConversationsDetailsView />}
         {hasError && (
           <>
             <Alert color='danger'>Sorry! Can't load data… Please retry.</Alert>

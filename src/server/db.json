@@ -53,6 +53,27 @@
       "timestamp": 1620284667,
       "authorId": 2,
       "body": "Bonjour c'est le premier message de la seconde conversation"
+    },
+    {
+      "body": "coucou",
+      "timestamp": 1632178198,
+      "authorId": 1,
+      "conversationId": 4,
+      "id": 5
+    },
+    {
+      "body": "nouveau message",
+      "timestamp": 1632178316,
+      "authorId": 1,
+      "conversationId": 1,
+      "id": 6
+    },
+    {
+      "body": "hello",
+      "timestamp": 1632178351,
+      "authorId": 1,
+      "conversationId": 5,
+      "id": 7
     }
   ],
   "users": [
@@ -74,6 +95,16 @@
     {
       "id": 4,
       "nickname": "Elodie",
+      "token": "xxxx"
+    },
+    {
+      "id": 5,
+      "nickname": "Maeko",
+      "token": "xxxx"
+    },
+    {
+      "id": 6,
+      "nickname": "Duarte",
       "token": "xxxx"
     }
   ]

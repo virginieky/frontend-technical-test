@@ -5,6 +5,7 @@ const initialState = {
   hasConversationsError: false,
   hasMessagesError: false,
   messages: [],
+  hasConversationError: false,
 };
 
 const reducer = (state, action) =>
@@ -26,6 +27,10 @@ const reducer = (state, action) =>
       }
       case 'SET_MESSAGES_ERROR': {
         draftState.hasMessagesError = true;
+        break;
+      }
+      case 'SET_CONVERSATION_ERROR': {
+        draftState.hasConversationError = true;
         break;
       }
       default:
