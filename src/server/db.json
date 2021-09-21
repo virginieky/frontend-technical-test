@@ -23,6 +23,30 @@
       "senderId": 4,
       "senderNickname": "Elodie",
       "lastMessageTimestamp": 1625648667
+    },
+    {
+      "recipientId": 5,
+      "recipientNickname": "Maeko",
+      "senderId": 1,
+      "senderNickname": "Thibaut",
+      "lastMessageTimestamp": 1632259446799,
+      "id": 4
+    },
+    {
+      "recipientId": 5,
+      "recipientNickname": "Maeko",
+      "senderId": 1,
+      "senderNickname": "Thibaut",
+      "lastMessageTimestamp": 1632259497199,
+      "id": 5
+    },
+    {
+      "recipientId": 5,
+      "recipientNickname": "Maeko",
+      "senderId": 1,
+      "senderNickname": "Thibaut",
+      "lastMessageTimestamp": 1632260284485,
+      "id": 6
     }
   ],
   "messages": [
@@ -53,6 +77,13 @@
       "timestamp": 1620284667,
       "authorId": 2,
       "body": "Bonjour c'est le premier message de la seconde conversation"
+    },
+    {
+      "body": "yo",
+      "timestamp": 1632259452,
+      "authorId": 1,
+      "conversationId": 4,
+      "id": 5
     }
   ],
   "users": [
@@ -74,6 +105,16 @@
     {
       "id": 4,
       "nickname": "Elodie",
+      "token": "xxxx"
+    },
+    {
+      "id": 5,
+      "nickname": "Maeko",
+      "token": "xxxx"
+    },
+    {
+      "id": 6,
+      "nickname": "Duarte",
       "token": "xxxx"
     }
   ]
