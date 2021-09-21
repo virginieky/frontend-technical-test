@@ -33,6 +33,13 @@ const reducer = (state, action) =>
         draftState.hasConversationError = true;
         break;
       }
+      case 'SET_NEW_CONVERSATION': {
+        draftState.conversations = [
+          ...draftState.conversations,
+          action.conversation,
+        ];
+        break;
+      }
       default:
         return draftState;
     }

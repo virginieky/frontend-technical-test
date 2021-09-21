@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List should match the snapshot 1`] = `
+<DocumentFragment>
+  <ul
+    class="Wrapper-sc-1i3obe-0 bOCnmc"
+  >
+    <li
+      class="Wrapper-sc-m0e7wi-0 gFNerB"
+    >
+      <div
+        class="Padded-sc-q6j7xl-0 chxjCd"
+      >
+        <p
+          class="Text-sc-yw3xjc-0 gQhyGc"
+          color="black"
+          font-size="16px"
+          font-weight="regular"
+        >
+          6 6 Duarte - 1 Thibaut
+        </p>
+        <div
+          class="Padded-sc-q6j7xl-0 dGTENR"
+        />
+        <p
+          class="Text-sc-yw3xjc-0 fPFqtQ"
+          color="black"
+          font-size="12px"
+          font-weight="regular"
+        >
+          Last message sent: 05/02/53693
+        </p>
+      </div>
+    </li>
+    <li
+      class="Wrapper-sc-m0e7wi-0 gFNerB"
+    >
+      <div
+        class="Padded-sc-q6j7xl-0 chxjCd"
+      >
+        <p
+          class="Text-sc-yw3xjc-0 gQhyGc"
+          color="black"
+          font-size="16px"
+          font-weight="regular"
+        >
+          5 5 Maeko - 1 Thibaut
+        </p>
+        <div
+          class="Padded-sc-q6j7xl-0 dGTENR"
+        />
+        <p
+          class="Text-sc-yw3xjc-0 fPFqtQ"
+          color="black"
+          font-size="12px"
+          font-weight="regular"
+        >
+          Last message sent: 05/01/53693
+        </p>
+      </div>
+    </li>
+    <li
+      class="Wrapper-sc-m0e7wi-0 gFNerB"
+    >
+      <div
+        class="Padded-sc-q6j7xl-0 chxjCd"
+      >
+        <p
+          class="Text-sc-yw3xjc-0 gQhyGc"
+          color="black"
+          font-size="16px"
+          font-weight="regular"
+        >
+          4 5 Maeko - 1 Thibaut
+        </p>
+        <div
+          class="Padded-sc-q6j7xl-0 dGTENR"
+        />
+        <p
+          class="Text-sc-yw3xjc-0 fPFqtQ"
+          color="black"
+          font-size="12px"
+          font-weight="regular"
+        >
+          Last message sent: 04/30/53693
+        </p>
+      </div>
+    </li>
+    <li
+      class="Wrapper-sc-m0e7wi-0 gFNerB"
+    >
+      <div
+        class="Padded-sc-q6j7xl-0 chxjCd"
+      >
+        <p
+          class="Text-sc-yw3xjc-0 gQhyGc"
+          color="black"
+          font-size="16px"
+          font-weight="regular"
+        >
+          3 1 Thibaut - 4 Elodie
+        </p>
+        <div
+          class="Padded-sc-q6j7xl-0 dGTENR"
+        />
+        <p
+          class="Text-sc-yw3xjc-0 fPFqtQ"
+          color="black"
+          font-size="12px"
+          font-weight="regular"
+        >
+          Last message sent: 07/07/2021
+        </p>
+      </div>
+    </li>
+    <li
+      class="Wrapper-sc-m0e7wi-0 gFNerB"
+    >
+      <div
+        class="Padded-sc-q6j7xl-0 chxjCd"
+      >
+        <p
+          class="Text-sc-yw3xjc-0 gQhyGc"
+          color="black"
+          font-size="16px"
+          font-weight="regular"
+        >
+          1 2 Jeremie - 1 Thibaut
+        </p>
+        <div
+          class="Padded-sc-q6j7xl-0 dGTENR"
+        />
+        <p
+          class="Text-sc-yw3xjc-0 fPFqtQ"
+          color="black"
+          font-size="12px"
+          font-weight="regular"
+        >
+          Last message sent: 07/07/2021
+        </p>
+      </div>
+    </li>
+    <li
+      class="Wrapper-sc-m0e7wi-0 gFNerB"
+    >
+      <div
+        class="Padded-sc-q6j7xl-0 chxjCd"
+      >
+        <p
+          class="Text-sc-yw3xjc-0 gQhyGc"
+          color="black"
+          font-size="16px"
+          font-weight="regular"
+        >
+          2 3 Patrick - 1 Thibaut
+        </p>
+        <div
+          class="Padded-sc-q6j7xl-0 dGTENR"
+        />
+        <p
+          class="Text-sc-yw3xjc-0 fPFqtQ"
+          color="black"
+          font-size="12px"
+          font-weight="regular"
+        >
+          Last message sent: 05/06/2021
+        </p>
+      </div>
+    </li>
+  </ul>
+</DocumentFragment>
+`;

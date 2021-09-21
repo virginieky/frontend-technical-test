@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="Wrapper-sc-omo8oc-0 cxzqom"
+  >
+    <div
+      class="container"
+    >
+      <div
+        class="Flex-sc-1vrf9e3-0 kMTbkk"
+      >
+        <div
+          class="Padded-sc-q6j7xl-0 dlzNrg"
+        >
+          <div>
+            <div
+              style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
+            >
+              <img
+                alt="Leboncoin's logo"
+                data-nimg="fill"
+                decoding="async"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+              />
+              <noscript />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -13,34 +13,17 @@ import {
   ModalFooter,
 } from 'reactstrap';
 
+import {
+  getCreateButtonClick,
+  getModalToggle,
+  getRecipientChange,
+} from './utils';
+
 const Modal = ({ onCreate, options }) => {
-  const [modal, setModal] = useState(true);
-  const [form, setForm] = useState({ recipient: '', message: '' });
-  const isSubmitButtonDisabled = !form.recipient || !form.message;
-
-  const toggle = () => setModal(!modal);
-  const handleCreateClick = () => {
-    const recipientId = parseInt(form.recipient);
-    const selectedOption = options.find((option) => option.id === recipientId);
-    const message = form.message;
-
-    onCreate({
-      recipient: {
-        recipientId,
-        recipientNickname: selectedOption.nickname,
-      },
-      message,
-    });
-    toggle();
-  };
-
-  const handleChange = ({ target }) => {
-    const { name, value } = target;
-    setForm((prevState) => ({
-      ...prevState,
-      [name]: value,
-    }));
-  };
+  const [modal, setModal] = useState(false);
+  const [recipient, setRecipient] = useState('');
+  const isSubmitButtonDisabled = !recipient;
+  const toggle = getModalToggle({ setModal });
 
   return (
     <div>
@@ -58,8 +41,8 @@ const Modal = ({ onCreate, options }) => {
                   type='select'
                   name='recipient'
                   id='recipient'
-                  value={form.recipient}
-                  onChange={handleChange}
+                  value={recipient}
+                  onChange={getRecipientChange({ setRecipient })}
                 >
                   <option value=''>Please choose a contact</option>
                   {options.map((option) => {
@@ -70,15 +53,6 @@ const Modal = ({ onCreate, options }) => {
                     );
                   })}
                 </Input>
-                <Label for='message'>Message</Label>
-                <Input
-                  type='text'
-                  name='message'
-                  id='message'
-                  placeholder='Type your message here...'
-                  value={form.message}
-                  onChange={handleChange}
-                />
               </FormGroup>
             </Form>
           ) : (
@@ -90,7 +64,12 @@ const Modal = ({ onCreate, options }) => {
             <Button
               disabled={isSubmitButtonDisabled}
               color='primary'
-              onClick={handleCreateClick}
+              onClick={getCreateButtonClick({
+                options,
+                recipient,
+                onCreate,
+                toggle,
+              })}
             >
               Create
             </Button>

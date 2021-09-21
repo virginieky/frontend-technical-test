@@ -103,21 +103,16 @@ const ConversationsProvider = ({ children }) => {
     }
   };
 
-  const createConversation = async (form) => {
+  const createConversation = async (recipient) => {
     const apiUrl = process.env.apiUrl;
     const requestURL = `${apiUrl}/conversations/${id}`;
 
     const timestamp = new Date().getTime();
     const body = {
-      ...form.recipient,
+      ...recipient,
       senderId: id,
       senderNickname: nickname,
       lastMessageTimestamp: timestamp,
-    };
-
-    const message = {
-      timestamp,
-      text: form.message,
     };
 
     try {
@@ -130,9 +125,12 @@ const ConversationsProvider = ({ children }) => {
       });
 
       if (isMounted) {
-        fetchConversations();
-        createMessage(message, conversation.id);
-
+        // The watcher does not work for the new conversations so I mocked the new entry by updating the store
+        // The new entry will disappear on refresh so please restart the json-server to retrieve the changes
+        dispatch({
+          type: 'SET_NEW_CONVERSATION',
+          conversation: { ...body, id: conversation.id },
+        });
         setSelectedConversation(conversation.id);
       }
     } catch (err) {
@@ -142,8 +140,8 @@ const ConversationsProvider = ({ children }) => {
     }
   };
 
-  const onConversationCreate = (form) => {
-    createConversation(form);
+  const onConversationCreate = (recipient) => {
+    createConversation(recipient);
   };
 
   const onNewMessageSend = ({ message }) => {

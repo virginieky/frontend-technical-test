@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "start-server": "json-server --watch src/server/db.json --routes src/server/routes.json --middlewares src/server/middleware/conversations.js --port 3005",
-    "test": "jest",
+    "test": "jest --watch",
+    "test:coverage": "jest --coverage",
     "lint": "next lint --no-error-on-unmatched-pattern"
   },
   "engines": {
@@ -31,7 +32,7 @@
   "devDependencies": {
     "@testing-library/dom": "^8.1.0",
     "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
+    "@testing-library/react": "^12.1.0",
     "@types/node": "^16.6.1",
     "@types/react": "^17.0.18",
     "babel-jest": "^27.0.6",

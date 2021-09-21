@@ -5,6 +5,7 @@ import { getDisplayedDate } from '../../utils';
 import Padded from '../Padded';
 import Text from '../Text';
 import Wrapper from './Wrapper';
+import { getCellClick } from './utils';
 
 const ListCell = ({
   id,
@@ -15,10 +16,8 @@ const ListCell = ({
   senderId,
   senderNickname,
 }) => {
-  const handleClick = () => onClick(id);
-
   return (
-    <Wrapper onClick={handleClick}>
+    <Wrapper onClick={getCellClick({ onClick, id })}>
       <Padded right bottom left>
         <Text fontSize='16px' ellipsis>
           {id} {recipientId} {recipientNickname} - {senderId} {senderNickname}
