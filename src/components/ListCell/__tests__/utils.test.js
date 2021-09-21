@@ -3,12 +3,12 @@ import { getCellClick } from '../utils';
 describe('getCellClick', () => {
   const getCellClickProps = {
     onClick: jest.fn(),
+    id: 1,
   };
 
   it('should call onClick with the right id', () => {
-    const expected = 1;
-    getCellClick(getCellClickProps)(expected);
+    getCellClick(getCellClickProps)();
 
-    expect(getCellClickProps.onClick).toHaveBeenCalledWith(expected);
+    expect(getCellClickProps.onClick).toHaveBeenCalledWith(1);
   });
 });

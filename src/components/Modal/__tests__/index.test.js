@@ -1,5 +1,6 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import { users } from '../../../templates';
 import Modal from '../index';
@@ -9,16 +10,20 @@ describe('Modal', () => {
     options: users,
   };
 
-  it('should match the snapshot with options', () => {
+  it('should match the snapshot', () => {
     const { asFragment } = render(<Modal {...defaultProps} />);
 
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('should match the snapshot without options', () => {
-    const { asFragment } = render(<Modal />);
+  it('should display the modal on new button click', async () => {
+    render(<Modal {...defaultProps} />);
+    const newConversationButton = screen.getByRole('button', {
+      name: /New conversation/i,
+    });
+    await userEvent.click(newConversationButton);
 
-    expect(asFragment()).toMatchSnapshot();
+    expect(screen.getByText('Create new conversation')).toBeInTheDocument();
   });
 
   it('should use onCreate defaultProps', () => {

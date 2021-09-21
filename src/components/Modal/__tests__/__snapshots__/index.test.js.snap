@@ -12,29 +12,3 @@ exports[`Modal should match the snapshot 1`] = `
   </div>
 </DocumentFragment>
 `;
-
-exports[`Modal should match the snapshot with options 1`] = `
-<DocumentFragment>
-  <div>
-    <button
-      class="btn btn-danger"
-      type="button"
-    >
-      New conversation
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Modal should match the snapshot without options 1`] = `
-<DocumentFragment>
-  <div>
-    <button
-      class="btn btn-danger"
-      type="button"
-    >
-      New conversation
-    </button>
-  </div>
-</DocumentFragment>
-`;
