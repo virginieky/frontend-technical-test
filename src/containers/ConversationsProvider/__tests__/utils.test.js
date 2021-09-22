@@ -10,6 +10,14 @@ import {
 } from '../utils';
 
 describe('containers | ConversationsProvider | utils', () => {
+  const failResult = new Response('', {
+    status: 404,
+    statusText: 'Not Found',
+    headers: {
+      'Content-type': 'application/json',
+    },
+  });
+
   describe('getConversationsFetch', () => {
     const getConversationsFetchProps = {
       fetchConversations: jest.fn(),
@@ -53,14 +61,6 @@ describe('containers | ConversationsProvider | utils', () => {
   describe('fetchConversations', () => {
     const sucessResult = new Response('[]', {
       status: 200,
-    });
-
-    const failResult = new Response('', {
-      status: 404,
-      statusText: 'Not Found',
-      headers: {
-        'Content-type': 'application/json',
-      },
     });
 
     beforeEach(() => {
@@ -150,14 +150,6 @@ describe('containers | ConversationsProvider | utils', () => {
       status: 200,
     });
 
-    const failResult = new Response('', {
-      status: 404,
-      statusText: 'Not Found',
-      headers: {
-        'Content-type': 'application/json',
-      },
-    });
-
     beforeEach(() => {
       window.fetch = jest.fn();
     });
@@ -243,14 +235,6 @@ describe('containers | ConversationsProvider | utils', () => {
   describe('createMessage', () => {
     const sucessResult = new Response('{}', {
       status: 201,
-      headers: {
-        'Content-type': 'application/json',
-      },
-    });
-
-    const failResult = new Response('', {
-      status: 404,
-      statusText: 'Not Found',
       headers: {
         'Content-type': 'application/json',
       },
@@ -357,14 +341,6 @@ describe('containers | ConversationsProvider | utils', () => {
   describe('createConversation', () => {
     const sucessResult = new Response('{}', {
       status: 201,
-      headers: {
-        'Content-type': 'application/json',
-      },
-    });
-
-    const failResult = new Response('', {
-      status: 404,
-      statusText: 'Not Found',
       headers: {
         'Content-type': 'application/json',
       },
