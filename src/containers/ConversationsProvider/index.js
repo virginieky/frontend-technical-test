@@ -1,12 +1,19 @@
 import React, { useReducer, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
 
 import ConversationsContext from '../../contexts/ConversationsContext';
 import useIsMounted from '../../hooks/useIsMounted';
 import useUsersContext from '../../hooks/useUsersContext';
-import { request } from '../../utils';
 import reducer, { initialState } from './reducer';
+import {
+  createConversation,
+  createMessage,
+  fetchConversations,
+  fetchMessages,
+  getConversationsFetch,
+  getConversationSelect,
+  getMessagesFetch,
+} from './utils';
 
 const ConversationsProvider = ({ children }) => {
   const isMounted = useIsMounted();
@@ -17,148 +24,43 @@ const ConversationsProvider = ({ children }) => {
   const [selectedConversation, setSelectedConversation] = useState(null);
 
   useEffect(() => {
-    if (id) {
-      fetchConversations();
-    }
+    getConversationsFetch({
+      fetchConversations,
+      id,
+      isMounted,
+      dispatch,
+    })();
   }, [id]);
 
   useEffect(() => {
-    if (selectedConversation) {
-      fetchMessages();
-    }
+    getMessagesFetch({
+      fetchMessages,
+      id: selectedConversation,
+      isMounted,
+      dispatch,
+    })();
   }, [selectedConversation]);
-
-  const fetchConversations = async () => {
-    const apiUrl = process.env.apiUrl;
-    const requestURL = `${apiUrl}/conversations/${id}`;
-
-    try {
-      const conversations = await request(requestURL, { method: 'GET' });
-
-      if (isMounted) {
-        dispatch({
-          type: 'GET_CONVERSATIONS_SUCCEEDED',
-          conversations,
-        });
-      }
-    } catch (err) {
-      if (isMounted) {
-        dispatch({ type: 'SET_CONVERSATIONS_ERROR' });
-      }
-    }
-  };
-
-  const fetchMessages = async () => {
-    const apiUrl = process.env.apiUrl;
-    const requestURL = `${apiUrl}/messages/${selectedConversation}`;
-
-    try {
-      const messages = await request(requestURL, { method: 'GET' });
-
-      if (isMounted) {
-        dispatch({
-          type: 'GET_MESSAGES_SUCCEEDED',
-          messages,
-        });
-      }
-    } catch (err) {
-      if (isMounted) {
-        dispatch({ type: 'SET_MESSAGES_ERROR' });
-      }
-    }
-  };
-
-  const createMessage = async (
-    message,
-    conversationId = selectedConversation,
-  ) => {
-    const apiUrl = process.env.apiUrl;
-    const requestURL = `${apiUrl}/messages/${conversationId}`;
-    const { text, timestamp } = message;
-    const date = moment(timestamp).unix();
-
-    const body = {
-      body: text,
-      timestamp: date,
-      authorId: 1,
-      conversationId,
-    };
-
-    try {
-      await request(requestURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-      });
-
-      if (isMounted) {
-        fetchMessages();
-      }
-    } catch (err) {
-      if (isMounted) {
-        dispatch({ type: 'CREATE_MESSAGE_ERROR' });
-      }
-    }
-  };
-
-  const createConversation = async (recipient) => {
-    const apiUrl = process.env.apiUrl;
-    const requestURL = `${apiUrl}/conversations/${id}`;
-
-    const timestamp = new Date().getTime();
-    const body = {
-      ...recipient,
-      senderId: id,
-      senderNickname: nickname,
-      lastMessageTimestamp: timestamp,
-    };
-
-    try {
-      const conversation = await request(requestURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-      });
-
-      if (isMounted) {
-        // The watcher does not work for the new conversations so I mocked the new entry by updating the store
-        // The new entry will disappear on refresh so please restart the json-server to retrieve the changes
-        dispatch({
-          type: 'SET_NEW_CONVERSATION',
-          conversation: { ...body, id: conversation.id },
-        });
-        setSelectedConversation(conversation.id);
-      }
-    } catch (err) {
-      if (isMounted) {
-        dispatch({ type: 'SET_CONVERSATION_ERROR' });
-      }
-    }
-  };
-
-  const onConversationCreate = (recipient) => {
-    createConversation(recipient);
-  };
-
-  const onNewMessageSend = ({ message }) => {
-    createMessage(message);
-  };
-
-  const onSelectedConversationChange = (id) => {
-    setSelectedConversation(id);
-  };
 
   return (
     <ConversationsContext.Provider
       value={{
         ...reducerState,
-        onConversationCreate,
-        onSelectedConversationChange,
-        onNewMessageSend,
+        onConversationCreate: createConversation({
+          user: { id, nickname },
+          isMounted,
+          dispatch,
+          setSelectedConversation,
+        }),
+        onSelectedConversationChange: getConversationSelect({
+          setSelectedConversation,
+        }),
+        onNewMessageSend: createMessage({
+          authorId: id,
+          conversationId: selectedConversation,
+          isMounted,
+          dispatch,
+          fetchMessages,
+        }),
       }}
     >
       {children}

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button should match the snapshot 1`] = `
+exports[`components | Button should match the snapshot 1`] = `
 <DocumentFragment>
   <button
     class="Button__BackButton-sc-1bt4yv5-0 fSOTxT"

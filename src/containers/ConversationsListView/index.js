@@ -5,7 +5,7 @@ import Modal from '../../components/Modal';
 import List from '../../components/List';
 import useConversationsContext from '../../hooks/useConversationsContext';
 import useUsersContext from '../../hooks/useUsersContext';
-import { filterByReference } from '../../utils';
+import { filterByReference, getConversationCreate } from './utils';
 
 const ListView = () => {
   const { conversations, onSelectedConversationChange, onConversationCreate } =
@@ -23,14 +23,12 @@ const ListView = () => {
     'senderId',
   );
 
-  const handleCreateConversation = (recipient) => {
-    onConversationCreate(recipient);
-  };
-
   return (
     <Container>
       <Modal
-        onCreate={handleCreateConversation}
+        onCreate={getConversationCreate({
+          onConversationCreate,
+        })}
         options={filteredUsersBySender}
       />
       <List

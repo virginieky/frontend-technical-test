@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event';
 import { users } from '../../../templates';
 import Modal from '../index';
 
-describe('Modal', () => {
+describe('components | Modal', () => {
   const defaultProps = {
     options: users,
   };

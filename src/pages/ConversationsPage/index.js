@@ -9,13 +9,13 @@ import ConversationsListView from '../../containers/ConversationsListView';
 import useConversationsContext from '../../hooks/useConversationsContext';
 
 const ConversationsPage = () => {
-  const { hasError } = useConversationsContext();
+  const { hasConversationsError } = useConversationsContext();
 
   return (
     <>
       <Header />
       <PageContainer>
-        {!hasError && (
+        {!hasConversationsError && (
           <Row>
             <Col xs='12' lg='4'>
               <ConversationsListView />
@@ -26,7 +26,7 @@ const ConversationsPage = () => {
           </Row>
         )}
         Welcome
-        {hasError && (
+        {hasConversationsError && (
           <>
             <Alert color='danger'>Sorry! Can't load data… Please retry.</Alert>
             <Button>Retry</Button>

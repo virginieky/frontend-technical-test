@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { sortConversations } from '../../utils';
 import ListCell from '../ListCell';
 import Wrapper from './Wrapper';
+import { sortConversations } from './utils';
 
 const List = ({ conversations, onCellClick }) => {
   const sortedConversations = sortConversations(conversations);
