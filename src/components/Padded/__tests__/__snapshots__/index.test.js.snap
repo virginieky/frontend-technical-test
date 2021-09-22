@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Padded should match the snapshot 1`] = `
+exports[`components | Padded should match the snapshot 1`] = `
 <DocumentFragment>
   <div
     class="Padded-sc-q6j7xl-0 llxRKk"

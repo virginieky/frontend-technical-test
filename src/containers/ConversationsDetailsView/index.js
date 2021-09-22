@@ -3,23 +3,13 @@ import { Container } from 'reactstrap';
 import { Chat } from '@progress/kendo-react-conversational-ui';
 
 import useConversationsContext from '../../hooks/useConversationsContext';
+import useUsersContext from '../../hooks/useUsersContext';
+import { getFormattedMessages } from './utils';
 
 const DetailsView = () => {
   const { messages, onNewMessageSend } = useConversationsContext();
-
-  const user = {
-    id: 1,
-  };
-
-  const formattedMessages = messages.map((message) => {
-    const { timestamp, authorId, body } = message;
-    return {
-      ...message,
-      timestamp: new Date(timestamp * 1000),
-      author: { id: authorId },
-      text: body,
-    };
-  });
+  const { user } = useUsersContext();
+  const formattedMessages = getFormattedMessages(messages);
 
   return (
     <Container>

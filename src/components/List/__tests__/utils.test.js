@@ -1,6 +1,6 @@
-import sortConversations from '../sortConversations';
+import { sortConversations } from '../utils';
 
-describe('utils', () => {
+describe('components | List | utils', () => {
   describe('sortConversations', () => {
     it('should sort conversations by last message timestamp', () => {
       const conversations = [

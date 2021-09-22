@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import ListCell from '../index';
 
-describe('ListCell', () => {
+describe('components | ListCell', () => {
   it('should match the snapshot', () => {
     const { asFragment } = render(<ListCell />);
 

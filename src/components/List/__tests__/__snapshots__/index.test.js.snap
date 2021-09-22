@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`List should match the snapshot 1`] = `
+exports[`components | List should match the snapshot 1`] = `
 <DocumentFragment>
   <ul
     class="Wrapper-sc-1i3obe-0 bOCnmc"

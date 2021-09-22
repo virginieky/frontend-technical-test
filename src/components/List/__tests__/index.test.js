@@ -4,7 +4,7 @@ import { render } from '@testing-library/react';
 import { conversations } from '../../../templates';
 import List from '../index';
 
-describe('List', () => {
+describe('components | List', () => {
   const defaultProps = {
     conversations,
     onCellClick: jest.fn(),
