@@ -45,6 +45,12 @@ Then, open [http://localhost:3000](http://localhost:3000/) to view it in the bro
 The page will reload if you make edits.
 <br/><br/>
 
+Start the API server on port 3005:
+
+```
+npm run start-server
+```
+
 To launch the test runner in the interactive watch mode, you can run in the project directory:
 
 ```
