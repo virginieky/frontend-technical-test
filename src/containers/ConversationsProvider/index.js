@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect, useState } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import ConversationsContext from '../../contexts/ConversationsContext';
@@ -21,7 +21,6 @@ const ConversationsProvider = ({ children }) => {
     user: { id, nickname },
   } = useUsersContext();
   const [reducerState, dispatch] = useReducer(reducer, initialState);
-  //const [selectedConversation, setSelectedConversation] = useState(null);
   const { selectedConversation } = reducerState;
 
   const getConversations = () =>
