@@ -18,7 +18,7 @@ const Text = styled.p`
 `;
 
 Text.defaultProps = {
-  color: 'black',
+  color: '#1a1a1a',
   ellipsis: false,
   fontSize: '1.3rem',
   fontWeight: 'regular',

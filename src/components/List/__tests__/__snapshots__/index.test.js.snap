@@ -3,28 +3,28 @@
 exports[`components | List should match the snapshot 1`] = `
 <DocumentFragment>
   <ul
-    class="Wrapper-sc-1i3obe-0 bOCnmc"
+    class="Wrapper-sc-1i3obe-0 iFQsIY"
   >
     <li
-      class="Wrapper-sc-m0e7wi-0 gFNerB"
+      class="Wrapper-sc-m0e7wi-0 jruAWi"
     >
       <div
         class="Padded-sc-q6j7xl-0 chxjCd"
       >
         <p
-          class="Text-sc-yw3xjc-0 gQhyGc"
-          color="black"
+          class="Text-sc-yw3xjc-0 itKgFQ"
+          color="#1a1a1a"
           font-size="16px"
           font-weight="regular"
         >
-          6 6 Duarte - 1 Thibaut
+          Duarte &lt;-&gt; Thibaut
         </p>
         <div
           class="Padded-sc-q6j7xl-0 dGTENR"
         />
         <p
-          class="Text-sc-yw3xjc-0 fPFqtQ"
-          color="black"
+          class="Text-sc-yw3xjc-0 jumoSc"
+          color="#1a1a1a"
           font-size="12px"
           font-weight="regular"
         >
@@ -33,25 +33,25 @@ exports[`components | List should match the snapshot 1`] = `
       </div>
     </li>
     <li
-      class="Wrapper-sc-m0e7wi-0 gFNerB"
+      class="Wrapper-sc-m0e7wi-0 jruAWi"
     >
       <div
         class="Padded-sc-q6j7xl-0 chxjCd"
       >
         <p
-          class="Text-sc-yw3xjc-0 gQhyGc"
-          color="black"
+          class="Text-sc-yw3xjc-0 itKgFQ"
+          color="#1a1a1a"
           font-size="16px"
           font-weight="regular"
         >
-          5 5 Maeko - 1 Thibaut
+          Maeko &lt;-&gt; Thibaut
         </p>
         <div
           class="Padded-sc-q6j7xl-0 dGTENR"
         />
         <p
-          class="Text-sc-yw3xjc-0 fPFqtQ"
-          color="black"
+          class="Text-sc-yw3xjc-0 jumoSc"
+          color="#1a1a1a"
           font-size="12px"
           font-weight="regular"
         >
@@ -60,25 +60,25 @@ exports[`components | List should match the snapshot 1`] = `
       </div>
     </li>
     <li
-      class="Wrapper-sc-m0e7wi-0 gFNerB"
+      class="Wrapper-sc-m0e7wi-0 jruAWi"
     >
       <div
         class="Padded-sc-q6j7xl-0 chxjCd"
       >
         <p
-          class="Text-sc-yw3xjc-0 gQhyGc"
-          color="black"
+          class="Text-sc-yw3xjc-0 itKgFQ"
+          color="#1a1a1a"
           font-size="16px"
           font-weight="regular"
         >
-          4 5 Maeko - 1 Thibaut
+          Maeko &lt;-&gt; Thibaut
         </p>
         <div
           class="Padded-sc-q6j7xl-0 dGTENR"
         />
         <p
-          class="Text-sc-yw3xjc-0 fPFqtQ"
-          color="black"
+          class="Text-sc-yw3xjc-0 jumoSc"
+          color="#1a1a1a"
           font-size="12px"
           font-weight="regular"
         >
@@ -87,25 +87,25 @@ exports[`components | List should match the snapshot 1`] = `
       </div>
     </li>
     <li
-      class="Wrapper-sc-m0e7wi-0 gFNerB"
+      class="Wrapper-sc-m0e7wi-0 jruAWi"
     >
       <div
         class="Padded-sc-q6j7xl-0 chxjCd"
       >
         <p
-          class="Text-sc-yw3xjc-0 gQhyGc"
-          color="black"
+          class="Text-sc-yw3xjc-0 itKgFQ"
+          color="#1a1a1a"
           font-size="16px"
           font-weight="regular"
         >
-          3 1 Thibaut - 4 Elodie
+          Thibaut &lt;-&gt; Elodie
         </p>
         <div
           class="Padded-sc-q6j7xl-0 dGTENR"
         />
         <p
-          class="Text-sc-yw3xjc-0 fPFqtQ"
-          color="black"
+          class="Text-sc-yw3xjc-0 jumoSc"
+          color="#1a1a1a"
           font-size="12px"
           font-weight="regular"
         >
@@ -114,25 +114,25 @@ exports[`components | List should match the snapshot 1`] = `
       </div>
     </li>
     <li
-      class="Wrapper-sc-m0e7wi-0 gFNerB"
+      class="Wrapper-sc-m0e7wi-0 jruAWi"
     >
       <div
         class="Padded-sc-q6j7xl-0 chxjCd"
       >
         <p
-          class="Text-sc-yw3xjc-0 gQhyGc"
-          color="black"
+          class="Text-sc-yw3xjc-0 itKgFQ"
+          color="#1a1a1a"
           font-size="16px"
           font-weight="regular"
         >
-          1 2 Jeremie - 1 Thibaut
+          Jeremie &lt;-&gt; Thibaut
         </p>
         <div
           class="Padded-sc-q6j7xl-0 dGTENR"
         />
         <p
-          class="Text-sc-yw3xjc-0 fPFqtQ"
-          color="black"
+          class="Text-sc-yw3xjc-0 jumoSc"
+          color="#1a1a1a"
           font-size="12px"
           font-weight="regular"
         >
@@ -141,25 +141,25 @@ exports[`components | List should match the snapshot 1`] = `
       </div>
     </li>
     <li
-      class="Wrapper-sc-m0e7wi-0 gFNerB"
+      class="Wrapper-sc-m0e7wi-0 jruAWi"
     >
       <div
         class="Padded-sc-q6j7xl-0 chxjCd"
       >
         <p
-          class="Text-sc-yw3xjc-0 gQhyGc"
-          color="black"
+          class="Text-sc-yw3xjc-0 itKgFQ"
+          color="#1a1a1a"
           font-size="16px"
           font-weight="regular"
         >
-          2 3 Patrick - 1 Thibaut
+          Patrick &lt;-&gt; Thibaut
         </p>
         <div
           class="Padded-sc-q6j7xl-0 dGTENR"
         />
         <p
-          class="Text-sc-yw3xjc-0 fPFqtQ"
-          color="black"
+          class="Text-sc-yw3xjc-0 jumoSc"
+          color="#1a1a1a"
           font-size="12px"
           font-weight="regular"
         >

@@ -439,15 +439,19 @@ describe('containers | ConversationsProvider | utils', () => {
 
   describe('getConversationSelect', () => {
     const getConversationSelectProps = {
-      setSelectedConversation: jest.fn(),
+      dispatch: jest.fn(),
     };
 
-    it('should call setSelectedConversation with the right id', () => {
+    it('should call dispatch with the right params', () => {
       getConversationSelect(getConversationSelectProps)(3);
+      const expected = {
+        type: 'SET_SELECTED_CONVERSATION',
+        id: 3,
+      };
 
-      expect(
-        getConversationSelectProps.setSelectedConversation,
-      ).toHaveBeenCalledWith(3);
+      expect(getConversationSelectProps.dispatch).toHaveBeenCalledWith(
+        expected,
+      );
     });
   });
 });

@@ -3,7 +3,7 @@
 exports[`components | PageContainer should match the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="PageContainer-sc-1gdmd4z-0 ewlSdy"
+    class="PageContainer-sc-1gdmd4z-0 crdHgH"
   />
 </DocumentFragment>
 `;

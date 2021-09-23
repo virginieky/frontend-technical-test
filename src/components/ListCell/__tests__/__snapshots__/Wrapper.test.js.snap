@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components | ListCell | Wrapper should match the snapshot 1`] = `
+<DocumentFragment>
+  <li
+    class="Wrapper-sc-m0e7wi-0 jruAWi"
+  />
+</DocumentFragment>
+`;
+
+exports[`components | ListCell | Wrapper should match the snapshot with isSelected props 1`] = `
+<DocumentFragment>
+  <li
+    class="Wrapper-sc-m0e7wi-0 jzDbvR"
+  />
+</DocumentFragment>
+`;

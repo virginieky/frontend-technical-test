@@ -1,4 +1,8 @@
-import { filterByReference, getConversationCreate } from '../utils';
+import {
+  filterByReference,
+  getConversationCreate,
+  getCellClick,
+} from '../utils';
 import { conversations, users } from '../../../templates';
 
 describe('containers | ConversationsListView | utils', () => {
@@ -44,6 +48,27 @@ describe('containers | ConversationsListView | utils', () => {
       expect(
         getConversationCreateProps.onConversationCreate,
       ).toHaveBeenCalledWith(3);
+    });
+  });
+
+  describe('getCellClick', () => {
+    const getCellClickProps = {
+      onSelectedConversationChange: jest.fn(),
+      setIsListHidden: jest.fn(),
+    };
+
+    it('should call onSelectedConversationChange with the right conversation id', () => {
+      getCellClick(getCellClickProps)(3);
+
+      expect(
+        getCellClickProps.onSelectedConversationChange,
+      ).toHaveBeenCalledWith(3);
+    });
+
+    it('should call setIsListHidden with the true value', () => {
+      getCellClick(getCellClickProps)(3);
+
+      expect(getCellClickProps.setIsListHidden).toHaveBeenCalledWith(true);
     });
   });
 });

@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render correctly App 1`] = `
+<DocumentFragment>
+  <div>
+    <div
+      class="Wrapper-sc-omo8oc-0 cxzqom"
+    >
+      <div
+        class="container"
+      >
+        <div
+          class="Flex-sc-1vrf9e3-0 kMTbkk"
+        >
+          <div
+            class="Padded-sc-q6j7xl-0 dlzNrg"
+          >
+            <div>
+              <div
+                style="display: block; overflow: hidden; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; margin: 0px;"
+              >
+                <img
+                  alt="Leboncoin's logo"
+                  data-nimg="fill"
+                  decoding="async"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
+                  style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%; object-fit: contain;"
+                />
+                <noscript />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button
+      class="styles__BackButton-sc-1444re7-1 masfD"
+    >
+      <svg
+        fill="#ff6e14"
+        height="30"
+        viewBox="0 0 16 16"
+        width="30"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+          fill-rule="evenodd"
+        />
+      </svg>
+    </button>
+    <div
+      class="PageContainer-sc-1gdmd4z-0 crdHgH"
+    >
+      <div
+        class="styles__Container-sc-1444re7-0 iCytAv"
+      >
+        <div
+          class="Padded-sc-q6j7xl-0 bwQbed"
+        >
+          <div
+            class="alert alert-danger fade"
+            role="alert"
+          >
+            <div
+              class="Flex-sc-1vrf9e3-0 jCaoAY"
+            >
+              <div
+                class="Padded-sc-q6j7xl-0 eoZbLV"
+              >
+                <svg
+                  fill="#842029"
+                  height="30"
+                  viewBox="0 0 16 16"
+                  width="30"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                  />
+                  <path
+                    d="M9.146 5.146a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708.708l-.647.646.647.646a.5.5 0 0 1-.708.708l-.646-.647-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zm-5 0a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 1 1 .708.708l-.647.646.647.646a.5.5 0 1 1-.708.708L5.5 7.207l-.646.647a.5.5 0 1 1-.708-.708l.647-.646-.647-.646a.5.5 0 0 1 0-.708zM10 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0z"
+                  />
+                </svg>
+              </div>
+              <br />
+              <span>
+                Sorry! Can't load data… Please retry.
+              </span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="Button-sc-1bt4yv5-0 jGLend"
+        >
+          <svg
+            fill="#ff6e14"
+            height="24"
+            viewBox="0 0 16 16"
+            width="24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"
+              fill-rule="evenodd"
+            />
+            <path
+              d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"
+            />
+          </svg>
+          <span>
+            Retry
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
