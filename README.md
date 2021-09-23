@@ -35,21 +35,21 @@ Once you have cloned the repo you must run the command below to install all the 
 npm install
 ```
 
-To run the app in the development mode:
-
-```
-npm run start
-```
-
-Then, open [http://localhost:3000](http://localhost:3000/) to view it in the browser.\
-The page will reload if you make edits.
-<br/><br/>
-
 Start the API server on port 3005:
 
 ```
 npm run start-server
 ```
+
+To run the app in the development mode:
+
+```
+npm run dev
+```
+
+Then, open [http://localhost:3000](http://localhost:3000/) to view it in the browser.\
+The page will reload if you make edits.
+<br/><br/>
 
 To launch the test runner in the interactive watch mode, you can run in the project directory:
 
