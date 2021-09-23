@@ -97,7 +97,8 @@ export const createConversation =
     const apiUrl = process.env.apiUrl;
     const requestURL = `${apiUrl}/conversations/${id}`;
 
-    const timestamp = new Date().getTime();
+    const timestamp = Math.round(new Date().getTime() / 1000);
+
     const body = {
       ...recipient,
       senderId: id,
