@@ -1,71 +1,66 @@
-# Context :
+# Frontend technical test
 
-At leboncoin, our users can share messages about a transaction, or ask for informations about any products.
+### Description
 
-Your job is to create the interface to consult those messages.
-The interface needs to work on both desktop & mobile devices.
+The goal for this project was to
 
-In addition to your code, a README explaining your thought process and your choices would be appreciated.
-
-# Exercice :
-
-- Display a list of all the conversations
-- Allow the user to select a conversation
-  - Inside the conversation, there is a list of all the messages between these two users.
-  - As a user, you can type and send new messages in this conversation
-
-**As your application can be used by millions of users, make sure to provide some robust safety guards.**
-
-### Sketches :
-
-Obvisouly, it is up to you to make something nice and pretty, you are free to design it the way you like. The sketches are here to give you an idea on how it should look.
-
-<details>
-  <summary>Click to see the sketches</summary>
-  
-Mobile list :
-
-![](./sketches/list-mobile.jpg)
-
-Desktop list :
-
-![](./sketches/list-desktop.jpg)
-
-Mobile conversation :
-
-![](./sketches/conv-mobile.jpg)
-
-Desktop conversation :
-
-![](./sketches/conv-desktop.jpg)
-
-</details>
-
-### API :
-
-You can find the API swagger file in `docs/api-swagger.yaml`.
-
-For a better readibility, you can view it on [https://leboncoin.tech/frontend-technical-test/](https://leboncoin.tech/frontend-technical-test/).
+1. Provide leboncoin user a responsive messaging application
+2. Retrieve the user conversations and display them as a list
+3. Allow the user to select a conversation to access to the related messages
+4. Allow the user to create new messages
+5. Allow the user to create new conversations
 
 ---
 
-## Bonus 1 :
+### Tools
 
-We provide some conversation samples, but can you improve the app so the user can now create new conversations ?
+For this project I used `React`, `Immer` and the `useReducer` hook to manage the stores that I pass through the app via the `React context API`.
+I choose `Kendo` to display the messages box.
+For the UI, I used `Reactstrap` and `Styled Components`.
+I also used `Jest` and `React testing library` for the testing part.
 
-## Bonus 2 :
+---
 
-Our infrastructure is a bit shaky.. Sometimes the servers are crashing. “It’s not you, it’s me”, but maybe you can display something nice to warn the user and handle it gracefully.
+### Available Scripts
 
-## Do you want to make the app even better ?
+Before you can run any scripts below install the project with the command below :
 
-Feel free to make as many improvements as you like.
-We love creativity and technical challenges.
+```
+git clone [https://github.com/virginieky/frontend-technical-test.git/](https://github.com/virginieky/frontend-technical-test.git/)
+```
 
-If you are out of ideas, here are some thoughts :
+Once you have cloned the repo you must run the command below to install all the dependencies.
 
-- As we want to reach our users anywhere, we need to make sure the app is performing well. What can you do to make it really fast ?
+```
+npm install
+```
 
-- Our goal is to support everybody in the country, including people with disabilities. As a good citizen and a good developer, can you make sure the app is accessible for everyone ?
+In the project directory, you can run:
 
-- We all love to relax after a hard day’s work. It would be a shame if we didn’t feel confident enough about the upcoming automatic deployment. Are you sure everything has been tested thoroughly ?
+```
+npm run test
+```
+
+Launches the test runner in the interactive watch mode.
+You can get the coverage details by running:
+
+```
+npm run test:coverage
+```
+
+Unit tests cover the whole application.
+
+```
+npm run start
+```
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000/) to view it in the browser.
+
+The page will reload if you make edits.\
+
+```
+npm run build
+```
+
+This will build the application for production into the dist folder.
