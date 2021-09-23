@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-
+import { PlusCircle } from 'react-bootstrap-icons';
 import {
-  Button,
+  Button as ReactstrapButton,
   Form,
   FormGroup,
   Input,
-  Label,
   Modal as ReactstrapModal,
   ModalHeader,
   ModalBody,
@@ -18,6 +17,8 @@ import {
   getModalToggle,
   getRecipientChange,
 } from './utils';
+import Button from '../Button';
+import ModalWrapper from './ModalWrapper';
 
 const Modal = ({ onCreate, options }) => {
   const [modal, setModal] = useState(false);
@@ -27,16 +28,16 @@ const Modal = ({ onCreate, options }) => {
 
   return (
     <div>
-      <Button color='danger' onClick={toggle}>
-        New conversation
+      <Button onClick={toggle}>
+        <PlusCircle size={24} color='#ff6e14' />
+        <span>New conversation</span>
       </Button>
-      <ReactstrapModal isOpen={modal} toggle={toggle}>
+      <ModalWrapper isOpen={modal} toggle={toggle}>
         <ModalHeader toggle={toggle}>Create new conversation</ModalHeader>
         <ModalBody>
           {options.length > 0 ? (
             <Form>
               <FormGroup>
-                <Label for='recipient'>Choose a contact</Label>
                 <Input
                   type='select'
                   name='recipient'
@@ -61,7 +62,7 @@ const Modal = ({ onCreate, options }) => {
         </ModalBody>
         <ModalFooter>
           {options.length > 0 && (
-            <Button
+            <ReactstrapButton
               disabled={isSubmitButtonDisabled}
               color='primary'
               onClick={getCreateButtonClick({
@@ -72,13 +73,13 @@ const Modal = ({ onCreate, options }) => {
               })}
             >
               Create
-            </Button>
+            </ReactstrapButton>
           )}
-          <Button color='secondary' onClick={toggle}>
+          <ReactstrapButton color='secondary' onClick={toggle}>
             Cancel
-          </Button>
+          </ReactstrapButton>
         </ModalFooter>
-      </ReactstrapModal>
+      </ModalWrapper>
     </div>
   );
 };

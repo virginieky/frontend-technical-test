@@ -29,24 +29,8 @@
       "recipientNickname": "Maeko",
       "senderId": 1,
       "senderNickname": "Thibaut",
-      "lastMessageTimestamp": 1632321188274,
+      "lastMessageTimestamp": 1632393246311,
       "id": 4
-    },
-    {
-      "recipientId": 5,
-      "recipientNickname": "Maeko",
-      "senderId": 1,
-      "senderNickname": "Thibaut",
-      "lastMessageTimestamp": 1632321271601,
-      "id": 5
-    },
-    {
-      "recipientId": 5,
-      "recipientNickname": "Maeko",
-      "senderId": 1,
-      "senderNickname": "Thibaut",
-      "lastMessageTimestamp": 1632321880437,
-      "id": 6
     }
   ],
   "messages": [
@@ -77,52 +61,6 @@
       "timestamp": 1620284667,
       "authorId": 2,
       "body": "Bonjour c'est le premier message de la seconde conversation"
-    },
-    {
-      "timestamp": 1632321276,
-      "authorId": 1,
-      "conversationId": 5,
-      "id": 5
-    },
-    {
-      "timestamp": 1632321282,
-      "authorId": 1,
-      "conversationId": 5,
-      "id": 6
-    },
-    {
-      "timestamp": 1632321400,
-      "authorId": 1,
-      "conversationId": 5,
-      "id": 7
-    },
-    {
-      "body": "yoyo",
-      "timestamp": 1632321433,
-      "authorId": 1,
-      "conversationId": 5,
-      "id": 8
-    },
-    {
-      "body": "hello",
-      "timestamp": 1632321499,
-      "authorId": 1,
-      "conversationId": 1,
-      "id": 9
-    },
-    {
-      "body": "hello",
-      "timestamp": 1632321885,
-      "authorId": 1,
-      "conversationId": 6,
-      "id": 10
-    },
-    {
-      "body": "hey",
-      "timestamp": 1632324280,
-      "authorId": 1,
-      "conversationId": 6,
-      "id": 11
     }
   ],
   "users": [

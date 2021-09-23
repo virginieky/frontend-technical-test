@@ -3,25 +3,25 @@
 exports[`components | ListCell should match the snapshot 1`] = `
 <DocumentFragment>
   <li
-    class="Wrapper-sc-m0e7wi-0 gFNerB"
+    class="Wrapper-sc-m0e7wi-0 jruAWi"
   >
     <div
       class="Padded-sc-q6j7xl-0 chxjCd"
     >
       <p
-        class="Text-sc-yw3xjc-0 gQhyGc"
-        color="black"
+        class="Text-sc-yw3xjc-0 itKgFQ"
+        color="#1a1a1a"
         font-size="16px"
         font-weight="regular"
       >
-           -  
+         &lt;-&gt; 
       </p>
       <div
         class="Padded-sc-q6j7xl-0 dGTENR"
       />
       <p
-        class="Text-sc-yw3xjc-0 fPFqtQ"
-        color="black"
+        class="Text-sc-yw3xjc-0 jumoSc"
+        color="#1a1a1a"
         font-size="12px"
         font-weight="regular"
       >

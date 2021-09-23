@@ -14,3 +14,10 @@ export const getConversationCreate =
   (recipient) => {
     onConversationCreate(recipient);
   };
+
+export const getCellClick =
+  ({ onSelectedConversationChange, setIsListHidden }) =>
+  (id) => {
+    onSelectedConversationChange(id);
+    setIsListHidden(true);
+  };

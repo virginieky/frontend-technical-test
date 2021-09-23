@@ -1,15 +1,23 @@
 import React from 'react';
-import { Container } from 'reactstrap';
+import PropTypes from 'prop-types';
 
 import Modal from '../../components/Modal';
 import List from '../../components/List';
 import useConversationsContext from '../../hooks/useConversationsContext';
 import useUsersContext from '../../hooks/useUsersContext';
-import { filterByReference, getConversationCreate } from './utils';
+import {
+  filterByReference,
+  getConversationCreate,
+  getCellClick,
+} from './utils';
 
-const ListView = () => {
-  const { conversations, onSelectedConversationChange, onConversationCreate } =
-    useConversationsContext();
+const ListView = ({ setIsListHidden }) => {
+  const {
+    conversations,
+    onSelectedConversationChange,
+    onConversationCreate,
+    selectedConversation,
+  } = useConversationsContext();
   const { users } = useUsersContext();
 
   const filteredUsersByRecipient = filterByReference(
@@ -24,7 +32,7 @@ const ListView = () => {
   );
 
   return (
-    <Container>
+    <div>
       <Modal
         onCreate={getConversationCreate({
           onConversationCreate,
@@ -33,10 +41,22 @@ const ListView = () => {
       />
       <List
         conversations={conversations}
-        onCellClick={onSelectedConversationChange}
+        selectedItem={selectedConversation}
+        onCellClick={getCellClick({
+          onSelectedConversationChange,
+          setIsListHidden,
+        })}
       />
-    </Container>
+    </div>
   );
+};
+
+ListView.defaultProps = {
+  setIsListHidden: () => {},
+};
+
+ListView.propTypes = {
+  setIsListHidden: PropTypes.func,
 };
 
 export default ListView;

@@ -6,6 +6,7 @@ const initialState = {
   hasMessagesError: false,
   messages: [],
   hasConversationError: false,
+  selectedConversation: null,
 };
 
 const reducer = (state, action) =>
@@ -38,6 +39,10 @@ const reducer = (state, action) =>
           ...draftState.conversations,
           action.conversation,
         ];
+        break;
+      }
+      case 'SET_SELECTED_CONVERSATION': {
+        draftState.selectedConversation = action.id;
         break;
       }
       default:

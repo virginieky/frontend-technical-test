@@ -21,15 +21,19 @@ const ConversationsProvider = ({ children }) => {
     user: { id, nickname },
   } = useUsersContext();
   const [reducerState, dispatch] = useReducer(reducer, initialState);
-  const [selectedConversation, setSelectedConversation] = useState(null);
+  //const [selectedConversation, setSelectedConversation] = useState(null);
+  const { selectedConversation } = reducerState;
 
-  useEffect(() => {
+  const getConversations = () =>
     getConversationsFetch({
       fetchConversations,
       id,
       isMounted,
       dispatch,
     })();
+
+  useEffect(() => {
+    getConversations();
   }, [id]);
 
   useEffect(() => {
@@ -49,10 +53,9 @@ const ConversationsProvider = ({ children }) => {
           user: { id, nickname },
           isMounted,
           dispatch,
-          setSelectedConversation,
         }),
         onSelectedConversationChange: getConversationSelect({
-          setSelectedConversation,
+          dispatch,
         }),
         onNewMessageSend: createMessage({
           authorId: id,
@@ -61,6 +64,7 @@ const ConversationsProvider = ({ children }) => {
           dispatch,
           fetchMessages,
         }),
+        onFetchConversations: getConversations,
       }}
     >
       {children}

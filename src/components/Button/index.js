@@ -1,19 +1,19 @@
 import styled from 'styled-components';
 
-const BackButton = styled.button`
-  display: block;
-  margin: auto;
+const Button = styled.button`
+  display: flex;
+  align-items: center;
   width: fit-content;
-  height: 40px;
+  height: 60px;
+  margin: auto;
   padding: 0 10px;
-  background: #ff6e14;
+  background: transparent;
   border: 0;
-  color: white;
-  border-radius: 4px;
-  transition: background-color .3s;
-  &:hover {
-    background-color: #c0562a;
+  color: #ff6e14;
+  outline: 0;
+  span {
+    margin-left: 10px;
   }
 `;
 
-export default BackButton;
+export default Button;

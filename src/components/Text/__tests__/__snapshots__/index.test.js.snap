@@ -3,8 +3,8 @@
 exports[`components | Text should match the snapshot 1`] = `
 <DocumentFragment>
   <p
-    class="Text-sc-yw3xjc-0 ihAFkw"
-    color="black"
+    class="Text-sc-yw3xjc-0 ikhRLM"
+    color="#1a1a1a"
     font-size="1.3rem"
     font-weight="regular"
   />

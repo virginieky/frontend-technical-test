@@ -1,4 +1,3 @@
-import { screen } from "@testing-library/react"
 import App from "../pages"
 import renderWithUsersContext from "../testUtils/renderWithUsersContext";
 
@@ -13,9 +12,8 @@ describe("App", () => {
   };
 
   it("should render correctly App", () => {
-    renderWithUsersContext(<App />, context)
-    expect(
-      screen.getByText(/Welcome/)
-    ).toBeInTheDocument()
+    const { asFragment } = renderWithUsersContext(<App />, context)
+    
+    expect(asFragment()).toMatchSnapshot();
   })
 });

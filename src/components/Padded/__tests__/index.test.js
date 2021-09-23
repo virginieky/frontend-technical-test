@@ -8,4 +8,10 @@ describe('components | Padded', () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it('should match the snapshot with attributes', () => {
+    const { asFragment } = render(<Padded bottom left right small top />);
+
+    expect(asFragment()).toMatchSnapshot();
+  });
 });

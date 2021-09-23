@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`pages | ConversationsPage | components BackButton should match the snapshot if isHidden is false 1`] = `
+<DocumentFragment>
+  <button
+    class="styles__BackButton-sc-1444re7-1 ecAQdg"
+  />
+</DocumentFragment>
+`;
+
+exports[`pages | ConversationsPage | components BackButton should match the snapshot if isHidden is true 1`] = `
+<DocumentFragment>
+  <button
+    class="styles__BackButton-sc-1444re7-1 masfD"
+  />
+</DocumentFragment>
+`;
+
+exports[`pages | ConversationsPage | components LeftPanel should match the snapshot if isHidden is false 1`] = `
+<DocumentFragment>
+  <div
+    class="styles__Panel-sc-1444re7-2 styles__LeftPanel-sc-1444re7-4 lhqZAk cnzVEV"
+  />
+</DocumentFragment>
+`;
+
+exports[`pages | ConversationsPage | components LeftPanel should match the snapshot if isHidden is true 1`] = `
+<DocumentFragment>
+  <div
+    class="styles__Panel-sc-1444re7-2 styles__LeftPanel-sc-1444re7-4 lhqZAk cRreCo"
+  />
+</DocumentFragment>
+`;

@@ -103,6 +103,23 @@ describe('containers | ConversationsProvider | reducer', () => {
     });
   });
 
+  describe('SET_SELECTED_CONVERSATION', () => {
+    it('should update selectedConversation with the id', () => {
+      const state = initialState;
+      const action = {
+        type: 'SET_SELECTED_CONVERSATION',
+        id: 3,
+      };
+
+      const expected = {
+        ...initialState,
+        selectedConversation: 3,
+      };
+
+      expect(reducer(state, action)).toEqual(expected);
+    });
+  });
+
   describe('default', () => {
     it('should return actual draft if no type is set', () => {
       const state = initialState;

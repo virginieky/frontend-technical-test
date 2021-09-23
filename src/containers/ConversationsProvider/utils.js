@@ -92,7 +92,7 @@ export const createMessage =
   };
 
 export const createConversation =
-  ({ user: { id, nickname }, isMounted, dispatch, setSelectedConversation }) =>
+  ({ user: { id, nickname }, isMounted, dispatch }) =>
   async (recipient) => {
     const apiUrl = process.env.apiUrl;
     const requestURL = `${apiUrl}/conversations/${id}`;
@@ -121,7 +121,8 @@ export const createConversation =
           type: 'SET_NEW_CONVERSATION',
           conversation: { ...body, id: conversation.id },
         });
-        setSelectedConversation(conversation.id);
+
+        getConversationSelect({ dispatch })(conversation.id);
       }
     } catch (err) {
       if (isMounted) {
@@ -131,7 +132,10 @@ export const createConversation =
   };
 
 export const getConversationSelect =
-  ({ setSelectedConversation }) =>
+  ({ dispatch }) =>
   (id) => {
-    setSelectedConversation(id);
+    dispatch({
+      type: 'SET_SELECTED_CONVERSATION',
+      id,
+    });
   };
